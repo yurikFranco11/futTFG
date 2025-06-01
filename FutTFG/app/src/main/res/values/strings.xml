@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FutTFG</string>
+    
+    <!-- Títulos de navegación -->
+    <string name="title_home">Inicio</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_sell">Vender</string>
+    <string name="title_profile">Perfil</string>
+    
+    <!-- Etiquetas de productos -->
+    <string name="product_name">Nombre del producto</string>
+    <string name="product_description">Descripción</string>
+    <string name="product_price">Precio (€)</string>
+    <string name="product_category">Categoría</string>
+    <string name="product_seller">Vendedor</string>
+    <string name="product_image">Imagen del producto</string>
+    
+    <!-- Botones -->
+    <string name="button_publish">Publicar producto</string>
+    <string name="button_edit">Editar</string>
+    <string name="button_delete">Eliminar</string>
+    <string name="button_select_image">Seleccionar imagen</string>
+    <string name="save_changes">Guardar cambios</string>
+    
+    <!-- Títulos -->
+    <string name="edit_product">Editar producto</string>
+    
+    <!-- Mensajes de error -->
+    <string name="error_required_field">Este campo es obligatorio</string>
+    <string name="error_invalid_price">Precio inválido</string>
+    <string name="error_no_image">Por favor, selecciona una imagen</string>
+    <string name="name_required">El nombre es obligatorio</string>
+    <string name="description_required">La descripción es obligatoria</string>
+    <string name="price_required">El precio es obligatorio</string>
+    <string name="image_url_required">La URL de la imagen es obligatoria</string>
+    <string name="select_valid_category">Selecciona una categoría válida</string>
+    <string name="invalid_image_url">Error al cargar la imagen: URL inválida</string>
+    <string name="error_loading_image">Error al cargar la imagen</string>
+    
+    <!-- Mensajes de éxito -->
+    <string name="product_published">Producto publicado correctamente</string>
+    <string name="product_updated">Producto actualizado correctamente</string>
+    <string name="product_deleted">Producto eliminado correctamente</string>
+    
+    <!-- Estado vacío -->
+    <string name="empty_products">No hay productos disponibles</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Colores principales de la app -->
+    <color name="primary">#2B2D42</color>
+    <color name="primary_dark">#1A1B2E</color>
+    <color name="primary_variant">#3D405B</color>
+    <color name="secondary">#FCA311</color>
+    <color name="secondary_variant">#F48C06</color>
+    
+    <!-- Colores de fondo -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F8F9FA</color>
+    
+    <!-- Colores de texto -->
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_secondary">#000000</color>
+    <color name="on_background">#2B2D42</color>
+    <color name="on_surface">#2B2D42</color>
+    
+    <!-- Colores de input -->
+    <color name="input_text">#2B2D42</color>
+    <color name="input_hint">#6C757D</color>
+    <color name="input_background">#FFFFFF</color>
+    <color name="input_stroke">#CED4DA</color>
+    
+    <!-- Colores adicionales -->
+    <color name="divider">#E9ECEF</color>
+    <color name="card_background">#FFFFFF</color>
+</resources>

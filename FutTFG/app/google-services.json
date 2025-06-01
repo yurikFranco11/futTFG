@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "307164089261",
+    "project_id": "tiendatfg-3ac0f",
+    "storage_bucket": "tiendatfg-3ac0f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307164089261:android:14323c8d9234a974666f24",
+        "android_client_info": {
+          "package_name": "com.example.futtfg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgT7qIhIGfB3sF571I_Nisaihe3RJVCrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307164089261:android:71a61aa5f104f07e666f24",
+        "android_client_info": {
+          "package_name": "com.example.tiendatfg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgT7qIhIGfB3sF571I_Nisaihe3RJVCrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

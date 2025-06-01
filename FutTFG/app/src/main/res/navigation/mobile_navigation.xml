@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.futtfg.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_sell"
+            app:destination="@id/navigation_sell">
+            <argument
+                android:name="productId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.futtfg.ui.search.SearchFragment"
+        android:label="Buscar"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navigation_search_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_sell"
+            app:destination="@id/navigation_sell" />
+        <action
+            android:id="@+id/action_navigation_search_to_editProductFragment"
+            app:destination="@id/navigation_sell">
+            <argument
+                android:name="productId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_sell"
+        android:name="com.example.futtfg.ui.sell.SellFragment"
+        android:label="@string/title_sell"
+        tools:layout="@layout/fragment_sell">
+        <argument
+            android:name="productId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.futtfg.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_userProducts"
+            app:destination="@id/userProductsFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_userPurchases"
+            app:destination="@id/userPurchasesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.futtfg.ui.detail.ProductDetailFragment"
+        android:label="Detalle del Producto"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProductsFragment"
+        android:name="com.example.futtfg.ui.profile.UserProductsFragment"
+        android:label="Mis Anuncios"
+        tools:layout="@layout/fragment_user_products">
+        <action
+            android:id="@+id/action_userProducts_to_productDetail"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_userProducts_to_navigation_sell"
+            app:destination="@id/navigation_sell">
+            <argument
+                android:name="productId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/userPurchasesFragment"
+        android:name="com.example.futtfg.ui.profile.UserPurchasesFragment"
+        android:label="Mis Compras"
+        tools:layout="@layout/fragment_user_purchases">
+        <action
+            android:id="@+id/action_userPurchases_to_productDetail"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+</navigation>

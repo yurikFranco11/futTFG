@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Reglas para la colección de productos
+    match /products/{productId} {
+      allow read: if true;  // Cualquiera puede leer productos
+      allow write: if request.auth != null;  // Solo usuarios autenticados pueden escribir
+      allow list: if true;  // Permitir listar productos
+      allow query: if true; // Permitir consultas
+      
+      // Permitir búsquedas compuestas
+      allow search: if true;
+    }
+    
+    // Reglas para la colección de usuarios
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Reglas para la colección de compras
+    match /purchases/{purchaseId} {
+      // Permitir lectura solo al comprador y al vendedor
+      allow read: if request.auth != null && 
+        (resource.data.buyerId == request.auth.uid || 
+         resource.data.sellerId == request.auth.uid);
+      
+      // Permitir crear compras solo al comprador
+      allow create: if request.auth != null && 
+        request.resource.data.buyerId == request.auth.uid;
+      
+      // No permitir modificaciones después de crear la compra
+      allow update, delete: if false;
+    }
+    
+    // Regla por defecto - denegar todo lo demás
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+} 
